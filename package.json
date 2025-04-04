@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node ./src/index.js",
     "build": "node ./src/index.js",
-    "fixtures": "node ./src/fixtures.js"
+    "fixtures": "node ./src/fixtures.js",
+    "lint": "npx eslint ."
   },
   "repository": {
     "type": "git",
