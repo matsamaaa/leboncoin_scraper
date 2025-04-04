@@ -11,7 +11,7 @@ class ResultManager {
     }
 
     async findById(id) {
-        return await this.model.findById(id);
+        return await this.model.findOne({ oid: id });
     }
 
     async findAll() {

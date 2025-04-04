@@ -1,11 +1,10 @@
 import mongoose from "mongoose";
 
 const resultSchema = new mongoose.Schema({
+    oid: String,
     name: String,
-    price: String,
-    location: String,
+    price: Number,
     url: String,
-    date: Date,
 });
 
 export default mongoose.model("Result", resultSchema, "results");

@@ -31,14 +31,21 @@ class Scraper {
         const $ = load(html);
         const objects = [];
 
-        $('div[class*="adcard_8f3833cd8"]').each((index, element) => {
-            const title = $(element).find('p[data-test-id="adcard-title"]').text().trim();
+        $('li[class*="styles_adCard__klAb3"]').each((index, element) => {
+            const name = $(element).find('p[data-test-id="adcard-title"]').text().trim();
             const price = $(element).find('p[data-test-id="price"]').text().trim();
+            const url = $(element).find('a[href^="/ad/collection/"]').attr('href');
+            const urlParts = String(url).split('/');
+            const objectId = urlParts[urlParts.length - 1];
 
-            objects.push({
-                title: title,
-                price: price.split('€')[0],
-            });
+            const object = {
+                oid: objectId,
+                name: name,
+                price: Number(price.split('€')[0].replace(/\s/g, '')),
+                url: `${this.baseUrl}${url}`,
+            }
+
+            objects.push(object);
         });
 
         objects.length > 0 
