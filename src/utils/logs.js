@@ -11,7 +11,7 @@ class Log {
     }
 
     static Error(message) {
-        console.log(`${chalk.white.bgRed.bold(`ERROR`)} [${Log.Date()}] » ${message}`);
+        console.log(`${chalk.white.bgRed.bold(` ERROR `)} [${Log.Date()}] » ${message}`);
     }
 
     static Info(message) {

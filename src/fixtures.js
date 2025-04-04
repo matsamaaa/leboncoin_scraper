@@ -24,3 +24,4 @@ await Promise.all(datas.map(async (data) => {
 }));
 
 Log.Success('Fixtures loaded successfully');
+process.exit(1);
