@@ -1,4 +1,4 @@
-import object from "../models/object";
+import object from "../models/object.js";
 
 class ObjectManager {
     constructor() {

@@ -1,4 +1,4 @@
-import ObjectManager from "./object";
-import UserManager from "./user";
+import ObjectManager from "./object.js";
+import ResultManager from "./result.js";
 
-export default { ObjectManager, UserManager };
+export { ObjectManager, ResultManager };

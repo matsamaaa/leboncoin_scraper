@@ -1,4 +1,4 @@
-import result from "../models/result";
+import result from "../models/result.js";
 
 class ResultManager {
     constructor() {
