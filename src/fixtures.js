@@ -15,6 +15,8 @@ try {
     process.exit(1);
 }
 
+Log.Info('Loading fixtures...');
+
 await Promise.all(datas.map(async (data) => {
     const objectManager = new ObjectManager();
     const object = await objectManager.create(data);
