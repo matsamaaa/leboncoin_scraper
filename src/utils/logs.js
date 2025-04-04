@@ -15,7 +15,7 @@ class Log {
     }
 
     static Info(message) {
-        console.log(`${chalk.white.bgBlue.bold(`INFO`)} [${Log.Date()}] » ${message}`);
+        console.log(`${chalk.white.bgBlue.bold(` INFO  `)} [${Log.Date()}] » ${message}`);
     }
 }
 
